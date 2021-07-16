@@ -69,6 +69,6 @@ export default {
       text: 'A menu',
     },
   ],
-  blogName: 'Otávio Miranda',
+  blogName: 'Marlon Dener',
   logo: '/assets/images/marlondener.png',
 } as MenuProps;

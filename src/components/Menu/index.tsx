@@ -1,15 +1,43 @@
 import * as Styled from './styles';
 
-import mock from './mock';
+import { Menu as MenuIcon } from '@styled-icons/material-outlined';
 
-export type MenuProps = {
-  title?: string;
+import { LogoLink } from '../LogoLink';
+import { MenuLink } from '../MenuLink';
+
+export type MenuPropsLinks = {
+  id: string;
+  link: string;
+  newTab?: boolean;
+  text: string;
 };
 
-export function Menu({ title = 'Change-me' }: MenuProps) {
+export type MenuProps = {
+  links: MenuPropsLinks[];
+  blogName: string;
+  logo: string;
+};
+
+export function Menu({ links, blogName, logo }: MenuProps) {
   return (
-    <Styled.Wrapper>
-      <h1>{title}</h1>
-    </Styled.Wrapper>
+    <>
+      <Styled.OpenClose href="#">
+        <MenuIcon aria-label="Abrir e fechar menu" />
+      </Styled.OpenClose>
+      <Styled.Wrapper>
+        <Styled.Nav>
+          <Styled.Logo>
+            <LogoLink link="/" text={blogName} srcImg={logo} />
+          </Styled.Logo>
+          {links.map((link) => {
+            return (
+              <MenuLink key={link.id} link={link.link} newTab={link.newTab}>
+                {link.text}
+              </MenuLink>
+            );
+          })}
+        </Styled.Nav>
+      </Styled.Wrapper>
+    </>
   );
 }
