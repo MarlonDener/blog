@@ -1,0 +1,92 @@
+{
+  "data": {
+    "setting": {
+      "id": "60f0ab569226e307f0af8bce",
+      "blogName": "Marlon Dener",
+      "blogDescription": "Melhores artigos sobre tecnologia",
+      "blogLogo": [
+        {
+          "id": "60f0adcc9226e307f0af8bcf",
+          "alternativeText": "",
+          "url": "https://res.cloudinary.com/marlondener/image/upload/v1626385862/img_perfil_3277efb34f.png"
+        }
+      ],
+      "menuLink": [
+        {
+          "id": "60f0adef9226e307f0af8bd0",
+          "link": "linkOne",
+          "text": "linkText",
+          "newTab": true
+        }
+      ],
+      "text": "<p>Fique por dentro das tecnologias e novidades do mercado.</p>"
+    },
+    "posts": [
+      {
+        "createdAt": "2021-01-22",
+        "id": "60f08d08fef23f23b8b60473",
+        "slug": "como-utilizar-use-state-e-suas-vantagens",
+        "title": "Como utilizar useState e suas vantagens",
+        "excerpt": "O Hook de Efeito, useEffect, adiciona a funcionalidade de executar efeitos colaterais através de um componente funcional. \nAssim quando atualizar algum dado na página, os dados que estão ligados a ele também são alterados.",
+        "content": "<p>Componentes funcionais são alguns dos componentes mais comumente usados ​​no <strong>ReactJS</strong>. A maioria dos desenvolvedores prefere usar componentes funcionais em vez de componentes baseados em classe pela simples razão de que os componentes funcionais requerem menos codificação (por parte do desenvolvedor). No entanto, dois recursos principais para a classe são perdidos quando se passa com um componente funcional - um estado dedicado que persiste por meio de chamadas de renderização, bem como o uso de funções de ciclo de vida para controlar como o componente se parece e se comporta em estágios separados de seu ciclo de vida.</p><p>Veja abaixo como iniciar com o <strong>useState</strong>:</p><pre><code class=\"language-plaintext\">import React, { useState } from 'react';\n \nfunction App() {\nconst click = useState('GeeksForGeeks');\nreturn (\n    &lt;h1&gt;Welcome to {click}&lt;/h1&gt;\n);\n}\n \nexport default App;</code></pre><p>Desde a versão 16.8, um novo recurso chamado hooks foi adicionado ao ReactJS que expôs os vários recursos dos componentes baseados em classe. Os dois mais usados ​​são o useState (), que permite que componentes funcionais tenham um estado dedicado próprio, e o useEffect (), que permite que componentes funcionais manipulem elementos DOM antes de cada renderização (quase como se fosse fazer em funções de ciclo de vida). O useState () permite declarar uma variável de estado dentro de uma função. Deve-se observar que um uso de useState () só pode ser usado para declarar uma variável de estado.</p><figure class=\"media\"><oembed url=\"https://www.youtube.com/watch?v=_ggyWGZODIM\"></oembed></figure><p><span style=\"color:rgb(0,0,0);\">O Hook de Efeito, </span><code>useEffect</code><span style=\"color:rgb(0,0,0);\">, adiciona a funcionalidade de executar efeitos colaterais através de um componente funcional. Segue a mesma finalidade do </span><code>componentDidMount</code><span style=\"color:rgb(0,0,0);\">, </span><code>componentDidUpdate</code><span style=\"color:rgb(0,0,0);\">, e </span><code>componentWillUnmount</code><span style=\"color:rgb(0,0,0);\"> em classes React, mas unificado em uma mesma API. Assim trazendo muitos ganhos para os desenvolvedores.</span></p><p><span style=\"color:rgb(0,0,0);\">Ver mais na documentação do React: </span><a href=\"https://pt-br.reactjs.org/docs/hooks-overview.html\"><span style=\"color:rgb(0,0,0);\">https://pt-br.reactjs.org/docs/hooks-overview.html</span></a></p>",
+        "allowComments": true,
+        "cover": {
+          "id": "60f091e4fef23f23b8b60478",
+          "alternativeText": "",
+          "url": "https://res.cloudinary.com/marlondener/image/upload/v1626378714/react_eb1ec86784.png"
+        },
+        "categories": [
+          {
+            "id": "60f08775fef23f23b8b6046f",
+            "displayName": "React",
+            "slug": "react"
+          }
+        ],
+        "tags": [
+          {
+            "id": "60f087a5fef23f23b8b60471",
+            "displayName": "useState",
+            "slug": "use-state"
+          }
+        ],
+        "author": {
+          "id": "60f0871dfef23f23b8b6046d",
+          "displayName": "Marlon Dener",
+          "slug": "marlon-dener"
+        }
+      },
+      {
+        "id": "60f0916dfef23f23b8b60475",
+        "slug": "entendendo-async-await",
+        "title": "Entendendo Async Await",
+        "excerpt": "Aprendendo mais sobre funções assíncronas",
+        "content": "<p style=\"margin-left:0px;\">O JavaScript tem evoluído muito nestes últimos anos e ainda temos muitas novidades interessantes a caminho!</p><p style=\"margin-left:0px;\">Este artigo é a continuação de uma série onde estamos discutindo as características assíncronas do JavaScript. Confira a lista dos <a href=\"https://braziljs.org/blog/tag/javascript-assincrono/\">artigos anteriores</a>.</p><p style=\"margin-left:0px;\">As <a href=\"https://braziljs.org/blog/promises-no-javascript\">promises</a> são uma daquelas coisas que trouxeram muitas mudanças na forma como trabalhamos com código assíncrono.</p><p style=\"margin-left:0px;\">Agora, com Async/Await, nós vamos evoluir ainda mais o tema <i>assíncrono</i>.</p><h3 style=\"margin-left:0px;\">Suporte</h3><p style=\"margin-left:0px;\">É chegada a hora de darmos mais um passo largo na especificação do ES8/ES2017 (atualmente em estágio 3). O time do <a href=\"https://www.chromestatus.com/feature/5643236399906816\">Chrome anunciou suporte oficial ao async/await</a> na versão 55 do navegador, pois já estão trabalhando na implementação das novidades do <a href=\"http://www.2ality.com/2016/02/ecmascript-2017.html\">ES8/ES2017</a>.</p><h3 style=\"margin-left:0px;\">Especificação</h3><p style=\"margin-left:0px;\">As duas palavrinhas mágicas aqui são o <code>async</code> e o <code>await</code>, e a especificação do <a href=\"https://github.com/tc39\">TC39</a> você pode <a href=\"https://tc39.github.io/ecmascript-asyncawait\">ler aqui</a>. Uma função é definida como assíncrona quando ela contém o modificador <i>async</i> e deve, então, devolver uma promise.</p><p style=\"margin-left:0px;\">Uma função somente pode esperar (await) por outra função assíncrona, caso ela também seja assíncrona (async).</p><h3 style=\"margin-left:0px;\">Async</h3><pre><code class=\"language-plaintext\">async function getUser(userId) {\r\n let response = await fetch(`https://api.com/api/user/${userId}`);\r\n let userData = await response.json();\r\n return userData.name; // não é necessário o await no return\r\n}</code></pre><p style=\"margin-left:0px;\">Ver mais sobre:<a href=\"https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/async_function\"> Async Await</a></p><p style=\"margin-left:0px;\">&nbsp;</p><h3 style=\"margin-left:0px;\">Resolvendo promessas</h3><p style=\"margin-left:0px;\">No caso de várias promessas que podem ser feitas paralelamente (por exemplo, alguns dados em <i>endpoints</i> REST diferentes), pode-se utilizar <code>async/await</code> em conjunto com <code>Promise.all</code>:</p><pre><code class=\"language-plaintext\">async function getUser(userId) {\r\n let response = await fetch(`https://api.com/api/user/${userId}`);\r\n let userData = await response.json();\r\n return userData;\r\n}\r\n\r\nlet [user1, user2] = await Promise.all([getUser(1), getUser(2)])</code></pre><p>\n\n</p>",
+        "allowComments": true,
+        "cover": {
+          "id": "60f09119fef23f23b8b60474",
+          "alternativeText": "",
+          "url": "https://res.cloudinary.com/marlondener/image/upload/v1626378516/images_81b6bf59bf.jpg"
+        },
+        "categories": [
+          {
+            "id": "60f0875cfef23f23b8b6046e",
+            "displayName": "Javascript",
+            "slug": "javascript"
+          }
+        ],
+        "tags": [
+          {
+            "id": "60f09199fef23f23b8b60477",
+            "displayName": "Async/await",
+            "slug": "async-await"
+          }
+        ],
+        "author": {
+          "id": "60f0871dfef23f23b8b6046d",
+          "displayName": "Marlon Dener",
+          "slug": "marlon-dener"
+        }
+      }
+    ]
+  }
+}

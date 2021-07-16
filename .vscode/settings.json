@@ -1,3 +1,5 @@
 {
-  "liveServer.settings.root": "/out"
+  "liveServer.settings.root": "/out",
+  "editor.defaultFormatter": "vscode.typescript-language-features",
+  "editor.formatOnSave": true
 }
