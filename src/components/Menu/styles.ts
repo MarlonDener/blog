@@ -17,7 +17,7 @@ const wrapperChanger = (
   }
 `;
 
-export const Wrapper = styled.nav<MenuBehaviorProps>`
+export const Wrapper = styled.div<MenuBehaviorProps>`
   ${({ theme, menuVisible }) => css`
     background: ${theme.colors.primary};
     padding: 10rem 1rem 1rem 3rem};
@@ -42,7 +42,7 @@ export const Nav = styled.nav`
   `}
 `;
 
-export const Logo = styled.nav`
+export const Logo = styled.div`
   ${({ theme }) => css`
     ${HeadingStyles} {
       display: flex;
