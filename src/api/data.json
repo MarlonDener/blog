@@ -4,13 +4,13 @@
       "id": "60f0ab569226e307f0af8bce",
       "blogName": "Marlon Dener",
       "blogDescription": "Melhores artigos sobre tecnologia",
-      "blogLogo": [
+      "blogLogo":
         {
           "id": "60f0adcc9226e307f0af8bcf",
           "alternativeText": "",
           "url": "https://res.cloudinary.com/marlondener/image/upload/v1626385862/img_perfil_3277efb34f.png"
-        }
-      ],
+        },
+
       "menuLink": [
         {
           "id": "60f0adef9226e307f0af8bd0",
@@ -83,6 +83,38 @@
         ],
         "author": {
           "id": "60f0871dfef23f23b8b6046d",
+          "displayName": "Marlon Dener",
+          "slug": "marlon-dener"
+        }
+      },
+       {
+        "id": "60f0916dfeas3b8b60475",
+        "slug": "entendendo-muitp-async-await",
+        "title": "Entendendo além Async Await",
+        "excerpt": "Aprendendo mais sobre funções assíncronas",
+        "content": "<p style=\"margin-left:0px;\">O JavaScript tem evoluído muito nestes últimos anos e ainda temos muitas novidades interessantes a caminho!</p><p style=\"margin-left:0px;\">Este artigo é a continuação de uma série onde estamos discutindo as características assíncronas do JavaScript. Confira a lista dos <a href=\"https://braziljs.org/blog/tag/javascript-assincrono/\">artigos anteriores</a>.</p><p style=\"margin-left:0px;\">As <a href=\"https://braziljs.org/blog/promises-no-javascript\">promises</a> são uma daquelas coisas que trouxeram muitas mudanças na forma como trabalhamos com código assíncrono.</p><p style=\"margin-left:0px;\">Agora, com Async/Await, nós vamos evoluir ainda mais o tema <i>assíncrono</i>.</p><h3 style=\"margin-left:0px;\">Suporte</h3><p style=\"margin-left:0px;\">É chegada a hora de darmos mais um passo largo na especificação do ES8/ES2017 (atualmente em estágio 3). O time do <a href=\"https://www.chromestatus.com/feature/5643236399906816\">Chrome anunciou suporte oficial ao async/await</a> na versão 55 do navegador, pois já estão trabalhando na implementação das novidades do <a href=\"http://www.2ality.com/2016/02/ecmascript-2017.html\">ES8/ES2017</a>.</p><h3 style=\"margin-left:0px;\">Especificação</h3><p style=\"margin-left:0px;\">As duas palavrinhas mágicas aqui são o <code>async</code> e o <code>await</code>, e a especificação do <a href=\"https://github.com/tc39\">TC39</a> você pode <a href=\"https://tc39.github.io/ecmascript-asyncawait\">ler aqui</a>. Uma função é definida como assíncrona quando ela contém o modificador <i>async</i> e deve, então, devolver uma promise.</p><p style=\"margin-left:0px;\">Uma função somente pode esperar (await) por outra função assíncrona, caso ela também seja assíncrona (async).</p><h3 style=\"margin-left:0px;\">Async</h3><pre><code class=\"language-plaintext\">async function getUser(userId) {\r\n let response = await fetch(`https://api.com/api/user/${userId}`);\r\n let userData = await response.json();\r\n return userData.name; // não é necessário o await no return\r\n}</code></pre><p style=\"margin-left:0px;\">Ver mais sobre:<a href=\"https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/async_function\"> Async Await</a></p><p style=\"margin-left:0px;\">&nbsp;</p><h3 style=\"margin-left:0px;\">Resolvendo promessas</h3><p style=\"margin-left:0px;\">No caso de várias promessas que podem ser feitas paralelamente (por exemplo, alguns dados em <i>endpoints</i> REST diferentes), pode-se utilizar <code>async/await</code> em conjunto com <code>Promise.all</code>:</p><pre><code class=\"language-plaintext\">async function getUser(userId) {\r\n let response = await fetch(`https://api.com/api/user/${userId}`);\r\n let userData = await response.json();\r\n return userData;\r\n}\r\n\r\nlet [user1, user2] = await Promise.all([getUser(1), getUser(2)])</code></pre><p>\n\n</p>",
+        "allowComments": true,
+        "cover": {
+          "id": "60f09119fsadsaf23b8b60474",
+          "alternativeText": "",
+          "url": "https://res.cloudinary.com/marlondener/image/upload/v1626378516/images_81b6bf59bf.jpg"
+        },
+        "categories": [
+          {
+            "id": "60f0875cfefsa3b8b6046e",
+            "displayName": "Javascript",
+            "slug": "javascript"
+          }
+        ],
+        "tags": [
+          {
+            "id": "60f091sa23b8b60477",
+            "displayName": "Async/await",
+            "slug": "async-await"
+          }
+        ],
+        "author": {
+          "id": "60f0871ds8b6046d",
           "displayName": "Marlon Dener",
           "slug": "marlon-dener"
         }

@@ -34,7 +34,7 @@ exports[`<ArticleMeta /> should math snapshot 1`] = `
   >
     <p>
       <span>
-        Por
+        Por 
       </span>
       <a
         href="/author/marlon-dener"

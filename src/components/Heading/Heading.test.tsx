@@ -72,7 +72,7 @@ describe('<Heading />', () => {
       'font-size',
       theme.font.sizes.xlarge,
       {
-        media: theme.media.lteMedium,
+        media: theme.media.Medium,
       },
     );
   });

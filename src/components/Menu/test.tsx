@@ -16,20 +16,19 @@ describe('<Menu />', () => {
     expect(openMenuIcon).toBeInTheDocument();
 
     expect(screen.queryByLabelText('Close menu')).not.toBeInTheDocument();
-
-    expect(screen.queryByRole('navigation')).toBeInTheDocument();
   });
 });
-//describe('<Menu />', () => {
-//it('should render button click', () => {
-//  renderTheme(<Menu {...props} />);
+describe('<Menu />', () => {
+  it('should render button click', () => {
+    renderTheme(<Menu {...props} />);
 
-//const buttonLink = screen.getByRole('link', { name: 'Open or close menu' });
-//fireEvent.click(buttonLink);
-//expect(screen.getByLabelText('Close menu')).toBeInTheDocument();
-//expect(screen.queryByLabelText('Open menu')).not.toBeInTheDocument();
+    const buttonLink = screen.getByRole('link', { name: 'Open or close menu' });
+    fireEvent.click(buttonLink);
+    expect(screen.getByLabelText('Close menu')).toBeInTheDocument();
+    expect(screen.queryByLabelText('Open menu')).not.toBeInTheDocument();
 
-//expect(screen.queryByRole('navigation')).toBeInTheDocument();
-// expect(screen.getByRole('heading', { name: 'Marlon Dener' }));
-//expect(screen.getByRole('img', { name: 'Marlon Dener' }));
-//  });
+    expect(screen.queryByRole('navigation')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Marlon Dener' }));
+    expect(screen.getByRole('img', { name: 'Marlon Dener' }));
+  });
+});

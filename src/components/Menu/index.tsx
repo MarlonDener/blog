@@ -36,7 +36,6 @@ export function Menu({ links, blogName, logo }: MenuProps) {
         aria-label="Open or close menu"
         onClick={handleOpenCloseMenu}
       >
-
         {menuVisible && <CloseIcon aria-label="Close menu" />}
         {!menuVisible && <MenuIcon aria-label="Open menu" />}
       </Styled.OpenClose>
