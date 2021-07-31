@@ -13,16 +13,25 @@ export const Wrapper = styled.header`
     font-size: ${theme.font.sizes.small};
     margin: 0 auto;
     ${HeadingStyles} {
-      margin: 0 0 calc(${theme.spacings.small} - 1rem);
+      margin: 0 0 ${theme.spacings.small} 0;
+    }
+
+    @media ${theme.media.Medium} {
+      display: flex;
+      flex-flow: column wrap;
+      padding-bottom: ${theme.spacings.small};
+      & > ${HeadingStyles}
     }
   `}
 `;
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    display: flex;
     flex-flow: column wrap;
     margin-left: ${theme.spacings.large};
     max-width: 48rem;
+    @media ${theme.media.Medium} {
+      margin-left: 0;
+    }
   `}
 `;

@@ -30,7 +30,7 @@ exports[`<Post /> should render header, excerpt, cover, metadata and post 1`] = 
 
 .c3 {
   color: #000000;
-  font-size: 6.4rem;
+  font-size: 4.3rem;
   text-transform: none;
   line-height: 1.2;
 }
@@ -47,7 +47,8 @@ exports[`<Post /> should render header, excerpt, cover, metadata and post 1`] = 
 }
 
 .c4 {
-  font-size: 2.4rem;
+  font-size: 2rem;
+  line-height: 26px;
 }
 
 .c5 {
@@ -188,12 +189,6 @@ exports[`<Post /> should render header, excerpt, cover, metadata and post 1`] = 
     max-width: 100%;
     float: none;
     margin: 0;
-  }
-}
-
-@media (max-width:768px) {
-  .c0 {
-    padding: 0 calc(3.2rem / 2);
   }
 }
 

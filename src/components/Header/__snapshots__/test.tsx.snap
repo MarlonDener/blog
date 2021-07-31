@@ -86,7 +86,7 @@ exports[`<Header /> should match snapshot 1`] = `
       >
         <img
           alt="Marlon Dener - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-          src="/assets/images/marlondener.png"
+          src="/assets/images/marlondener.jpg"
         />
       </a>
     </h1>

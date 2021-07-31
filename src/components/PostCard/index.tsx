@@ -18,12 +18,14 @@ export function PostCard({ title, cover, excerpt, slug }: PostCardProps) {
           <Styled.Cover src={cover.url} alt={title} />
         </a>
       </Link>
-      <Heading as="h2" size="small">
-        <Link href={`/post/${slug}`}>
-          <a className="titleClass">{title}</a>
-        </Link>
-      </Heading>
-      <Styled.Excerpt>{excerpt}</Styled.Excerpt>
+      <Styled.classToSpacings>
+        <Heading as="h2" size="small">
+          <Link href={`/post/${slug}`}>
+            <a className="titleClass">{title}</a>
+          </Link>
+        </Heading>
+        <Styled.Excerpt>{excerpt}</Styled.Excerpt>
+      </Styled.classToSpacings>
     </Styled.Wrapper>
   );
 }

@@ -16,7 +16,6 @@ export const Post = ({
   createdAt,
   excerpt,
   id,
-  slug,
 }: PostProps) => {
   return (
     <Styled.Wrapper>

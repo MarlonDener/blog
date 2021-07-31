@@ -70,5 +70,5 @@ export default {
     },
   ],
   blogName: 'Marlon Dener',
-  logo: '/assets/images/marlondener.png',
+  logo: '/assets/images/g',
 } as MenuProps;

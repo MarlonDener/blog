@@ -15,7 +15,8 @@ export const Wrapper = styled.header`
 
 export const Excerpt = styled.p`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
+    font-size: 2rem;
+    line-height: 26px;
   `}
 `;
 

@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components';
 import { Title } from '../Heading/styles';
 export const Wrapper = styled.div`
-  border: 2px solid ${(props) => props.theme.colors.primary};
   border-radius: 1rem;
-  box-shadow: 0.3rem 0.4rem 0.3rem 0.2rem rgba(0, 0, 0, 0.3);
+  box-shadow: 1rem 0.4rem 2rem 1rem rgba(0, 0, 0, 0.2);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
-  padding: 2rem 2.5rem;
   ${({ theme }) => css`
     ${Title} {
       margin: 0;
@@ -38,11 +37,8 @@ export const Cover = styled.img`
   max-width: 100%;
   transition: opacity 300ms ease-in-out;
   width: 100%;
-  object-fit: cover;
-  border-radius: 2rem;
-  max-height: 200px;
+  object-fit: contain;
   margin: 0 auto;
-  min-height: 200px;
 `;
 
 export const Excerpt = styled.p`
@@ -51,5 +47,11 @@ export const Excerpt = styled.p`
     top: -10px;
     max-width: 100%;
     font-size: ${theme.font.sizes.xsmall};
+  `}
+`;
+
+export const classToSpacings = styled.div`
+  ${({ theme }) => css`
+    padding: 1rem 1.1rem;
   `}
 `;
