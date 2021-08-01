@@ -16,14 +16,14 @@ export function BaseTemplate({ settings, children }: BaseTemplateProps) {
       <Menu
         links={settings.menuLink}
         blogName={settings.blogName}
-        logo={settings.blogLogo.url}
+        logo={settings.blogLogo[0].url}
       />
 
       <Styled.HeaderContainer>
         <Header
           blogName={settings.blogName}
           blogDescription={settings.blogDescription}
-          logo={settings.blogLogo.url}
+          logo={settings.blogLogo[0].url}
         />
       </Styled.HeaderContainer>
       <Styled.ContentContainer>{children}</Styled.ContentContainer>
