@@ -2,46 +2,34 @@ import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import { loadPosts, StrapiPostAndSettings } from '../../api/load-posts';
-import { PostTemplate } from '../../templates/PostTemplate';
+import PostsTemplate from '../../templates/PostsTemplate';
 
-export default function PostPage({ posts, setting }: StrapiPostAndSettings) {
+export default function CategoryPage({
+  posts,
+  setting,
+}: StrapiPostAndSettings) {
   const router = useRouter();
 
   if (router.isFallback) {
     return <h1>Loading...</h1>;
   }
 
-  const post = posts[0];
+  const CategoryName = posts[0].categories.filter(
+    (category) => category.slug === router.query.slug,
+  )[0].displayName;
 
   return (
     <>
       <Head>
-        <title>
-          {post.title} - {setting.blogName}
-        </title>
-        <meta name="description" content={post.excerpt} />
+        <title>Categoria: {CategoryName}</title>
       </Head>
-      <PostTemplate post={posts[0]} settings={setting} />
+      <PostsTemplate posts={posts} settings={setting} />
     </>
   );
 }
 export const getStaticPaths: GetStaticPaths = async () => {
-  let data: StrapiPostAndSettings | null = null;
-  let paths = [];
-
-  try {
-    data = await loadPosts();
-    paths = data.posts.map((post) => ({ params: { slug: post.slug } }));
-  } catch (e) {
-    data = null;
-  }
-
-  if (!data || !data.posts || !data.posts.length) {
-    paths = [];
-  }
-
   return {
-    paths,
+    paths: [],
     fallback: true,
   };
 };
@@ -52,7 +40,7 @@ export const getStaticProps: GetStaticProps<StrapiPostAndSettings> = async (
   let data = null;
 
   try {
-    data = await loadPosts({ postSlug: ctx.params.slug as string });
+    data = await loadPosts({ categorySlug: ctx.params.slug as string });
   } catch (e) {
     data = null;
   }

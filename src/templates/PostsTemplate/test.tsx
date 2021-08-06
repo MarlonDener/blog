@@ -1,6 +1,6 @@
 import React from 'react';
 import { renderTheme } from '../../styles/render-theme';
-import { PostsTemplate } from '.';
+import PostsTemplate from '.';
 
 describe('<PostsTemplate />', () => {
   it('should render snapshot', () => {
