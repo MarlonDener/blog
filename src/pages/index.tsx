@@ -1,9 +1,19 @@
 import { GetStaticProps } from 'next';
-import { loadPosts, StrapiPostAndSettings } from '../api/load-posts';
+import {
+  defaultLoadPostsVariables,
+  loadPosts,
+  StrapiPostAndSettings,
+} from '../api/load-posts';
 import PostsTemplate from '../templates/PostsTemplate';
 
-export default function index({ posts, setting }: StrapiPostAndSettings) {
-  return <PostsTemplate posts={posts} settings={setting} />;
+export default function index({
+  posts,
+  setting,
+  variables,
+}: StrapiPostAndSettings) {
+  return (
+    <PostsTemplate posts={posts} settings={setting} variables={variables} />
+  );
 }
 
 export const getStaticProps: GetStaticProps<StrapiPostAndSettings> =
@@ -26,6 +36,9 @@ export const getStaticProps: GetStaticProps<StrapiPostAndSettings> =
       props: {
         posts: data.posts,
         setting: data.setting,
+        variables: {
+          ...defaultLoadPostsVariables,
+        },
       },
       revalidate: 60,
     };

@@ -4,6 +4,8 @@ import { Menu } from '../../components/Menu';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { GoTop } from '../../components/GoTop';
+import { useRouter } from 'next/dist/client/router';
+import { ToggleTheme } from '../../ToggleTheme';
 
 export type BaseTemplateProps = {
   settings: SettingsStrapi;
@@ -11,8 +13,11 @@ export type BaseTemplateProps = {
 };
 
 export function BaseTemplate({ settings, children }: BaseTemplateProps) {
+  const router = useRouter();
+
   return (
     <Styled.Wrapper>
+      <ToggleTheme />
       <Menu
         links={settings.menuLink}
         blogName={settings.blogName}
@@ -26,6 +31,18 @@ export function BaseTemplate({ settings, children }: BaseTemplateProps) {
           logo={settings.blogLogo[0].url}
         />
       </Styled.HeaderContainer>
+
+      <Styled.searchContainer>
+        <form action="/search/" method="GET">
+          <Styled.searchInput
+            type="search"
+            placeholder="Busque por artigos"
+            name="q"
+            defaultValue={router?.query?.q || ''}
+          />
+        </form>
+      </Styled.searchContainer>
+
       <Styled.ContentContainer>{children}</Styled.ContentContainer>
       <Styled.FooterContainer>
         <Footer footerHtml={settings.text} />

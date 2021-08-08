@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { PostsTemplate, PostsTemplateProps } from '.';
+import PostsTemplate, { PostsTemplateProps } from '.';
 
 import mock from './mock';
 
@@ -9,6 +9,9 @@ export default {
   args: mock,
   parameters: {
     layout: 'fullscreen',
+    backgrounds: {
+      default: '',
+    },
   },
 } as Meta;
 
