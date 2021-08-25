@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.p`
   ${({ theme }) => css`
     margin: ${theme.spacings.medium} 0;
+    max-width: ${theme.font.sizes.content};
 
     span {
       margin: 0 0rem 0 0.5rem;
