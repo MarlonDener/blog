@@ -17,7 +17,7 @@ export function Comments({ id, slug, title, allowComments }: CommentsProps) {
       <DiscussionEmbed
         shortname="marlon-blog"
         config={{
-          url: `/post/${slug}`,
+          url: `https://blog-marlon-blog.vercel.app/post/${slug}`,
           identifier: id,
           title: title,
           language: 'pt_BR',
