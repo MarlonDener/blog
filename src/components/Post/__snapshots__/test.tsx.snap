@@ -233,13 +233,18 @@ Assim quando atualizar algum dado na página, os dados que estão ligados a ele 
             <span
               class="separator"
             >
-               | 
+               - 
             </span>
             <time
               datetime="2021-01-22"
             >
               21 de jan. de 2021
             </time>
+            <span
+              class="separator"
+            >
+               | 
+            </span>
             <span
               class="categories"
             >

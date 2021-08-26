@@ -2,6 +2,10 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
+    iframe[src*='ads'] {
+      display: none;
+    }
+
     font-size: calc(${theme.font.sizes.small} + 0.2rem);
     line-height: 1.5;
     p {
@@ -16,28 +20,6 @@ export const Container = styled.div`
     }
     a:hover {
       filter: brightness(50%);
-    }
-    code {
-      font-family: monospace;
-      color: ${theme.colors.secondary};
-      font-size: ${theme.font.sizes.small};
-      background: ${theme.colors.mediumGray};
-      padding: 0.2rem;
-      margin: 0.2rem;
-    }
-    pre {
-      background: ${theme.colors.primary};
-      padding: ${theme.spacings.medium};
-      font-family: monospace;
-      color: ${theme.colors.white};
-      margin: ${theme.spacings.medium} 0;
-      width: 100%;
-      overflow-x: auto;
-      font-size: ${theme.font.sizes.small};
-    }
-    pre code {
-      color: inherit;
-      background: inherit;
     }
     img {
       max-width: 100%;

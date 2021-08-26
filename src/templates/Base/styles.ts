@@ -1,6 +1,17 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  svg.search-ok-icon,
+  svg.search-cancel-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: 1rem;
+  }
+
+  svg.search-cancel-icon {
+    color: #d62738;
+  }
+`;
 
 export const HeaderContainer = styled.div`
   ${({ theme }) => css`
@@ -26,10 +37,14 @@ export const searchInput = styled.input`
     padding: 1rem ${theme.spacings.small};
     margin: 0 3rem;
     border: 1px solid ${theme.colors.primary};
-    min-width: 400px;
     box-shadow: 2px 1px 4px 2px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     outline: none;
+    max-width: 400px;
+    width: 80%;
+    &:disabled {
+      border: #ccc;
+    }
   `}
 `;
 
@@ -38,7 +53,7 @@ export const ContentContainer = styled.div`
     max-width: 100rem;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: ${theme.spacings.xhuge};
+    margin-bottom: ${theme.spacings.large};
   `}
 `;
 

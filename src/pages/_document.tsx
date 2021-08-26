@@ -38,6 +38,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
+          <link
+            rel="icon"
+            href="https://res.cloudinary.com/marlondener/image/upload/v1629940287/developer_cc754d141f.png"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link

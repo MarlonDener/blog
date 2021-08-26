@@ -44,13 +44,18 @@ exports[`<ArticleMeta /> should math snapshot 1`] = `
       <span
         class="separator"
       >
-         | 
+         - 
       </span>
       <time
         datetime="2021-03-02T15:16:09.246+00:00"
       >
         2 de mar. de 2021
       </time>
+      <span
+        class="separator"
+      >
+         | 
+      </span>
       <span
         class="categories"
       >

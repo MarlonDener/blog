@@ -16,7 +16,9 @@ describe('<PostTags />', () => {
     const { container } = renderTheme(<PostTags {...props} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        margin: 2.4rem 0;
+        margin: 2.4rem auto;
+        max-width: 90rem;
+        padding: 0 3.2rem;
       }
 
       .c0 span {
